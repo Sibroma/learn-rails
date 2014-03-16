@@ -1,0 +1,6 @@
+class Example < Objct
+
+# This is a comment.
+attr_ accessor :honorific
+attr_accessor :name
+attr_acc

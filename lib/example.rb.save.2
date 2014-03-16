@@ -1,0 +1,25 @@
+class Example < Object
+
+# This is a comment.
+
+	attr_accessor :honorific
+	attr_accessor :name
+	attr_accessor :date
+
+	def to_s
+		@name
+	end
+
+	def initialize(name,date)
+		@name = name
+		@date = date.nil? ? Date.today : date
+	end
+
+	def titled_name
+		@honorific ||= 'Esteemed'
+		title_name = "#{@honorific} #{@name}"
+	end
+
+	def december_birthdays
+		born_in_december = []
+		famous_birthdays.each do 
